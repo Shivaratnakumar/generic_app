@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.left, .right {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left { 
+    flex-direction: column;
+    background: #f0f0f0;
+    padding: 2rem; 
+}
+
+.right {
+    flex-direction: column;
+    background: #ffffff;
+    padding: 2rem;
+}
+
+.static-image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1 rem;
+}
+
+.static-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+
+
+mat-card { 
+    width: 100%;
+    width: 400px; 
+    padding: 2rem; 
+}
