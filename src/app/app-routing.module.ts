@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { InitialScreenComponent } from './initial-screen/initial-screen.component';
 import { SignupComponent } from './signup/signup.component';
 
+
 const routes: Routes =[
   {
     path: '', component: InitialScreenComponent
