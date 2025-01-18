@@ -9,6 +9,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'; 
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -19,6 +22,8 @@ import { InitialScreenComponent } from './initial-screen/initial-screen.componen
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
+import { PostCreateComponent } from './Posts/post-create/post-create.component';
+import { PostListComponent } from './Posts/post-list/post-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,9 @@ import { FooterComponent } from './footer/footer.component';
     InitialScreenComponent,
     HeaderComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    PostCreateComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,10 @@ import { FooterComponent } from './footer/footer.component';
     MatTabsModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

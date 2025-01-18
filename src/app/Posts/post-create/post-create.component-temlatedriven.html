@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form (submit)="savePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+        <mat-form-field>
+            <input 
+                matInput 
+                type="text" 
+                name="title"
+                placeholder="Please provide a title here" 
+                [ngModel] ="post?.title"
+                required
+                minlength="3" 
+                #title="ngModel"/>
+                <mat-error *ngIf="postForm.invalid && postForm.getControl(title).hasError('required')"> This is required</mat-error>
+                <mat-error *ngIf="postForm.invalid &&  postForm.getControl(title).touched && postForm.getControl(title).hasError('minlength')"> Atleast 3 letters needed</mat-error>
+                <!-- <mat-error *ngIf='title.invalid'>This is required</mat-error> -->
+                <!-- <mat-error *ngIf="postForm.invalid"> This field is required</mat-error> -->
+        </mat-form-field>
+        <div>
+            <button mat-stroked-button type="button" (click)="filePicker.click()">Pick-Image</button>
+            <input type="file" #filePicker/>
+        </div>
+        <mat-form-field>
+            <textarea 
+                matInput 
+                rows="6" 
+                name="description" 
+                placeholder="Please provide description here" 
+                [ngModel] ="post?.description" 
+                required
+                #description = "ngModel" >
+            </textarea>
+            <mat-error *ngIf='description.invalid'>This is required</mat-error>
+        </mat-form-field>
+        <button mat-raised-button 
+            color="warn"
+            type="submit" *ngIf="mode=='create'"> 
+            Save Post
+        </button>
+        <button mat-raised-button 
+            color="warn"
+            type="submit" *ngIf="mode=='edit'"> 
+            Update Post
+        </button>     
+    </form>    
+</mat-card>
+

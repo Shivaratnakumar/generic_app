@@ -1,8 +1,11 @@
 <app-header></app-header>
-<div class="container">
-    <app-sidebar></app-sidebar>
-    <div class="content">
-        <router-outlet></router-outlet>
-    </div>
-</div>
-<app-footer></app-footer>   
+<main>
+    <!-- <app-post-create (postCreated)="onPostSave($event)"></app-post-create>
+    <app-post-list [posts]="posts"></app-post-list> -->
+
+    <!-- <app-post-create></app-post-create>
+    <app-post-list></app-post-list> -->
+    <router-outlet></router-outlet>
+</main>
+
+<!-- <router-outlet></router-outlet> -->
