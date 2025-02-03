@@ -10,3 +10,22 @@
 mat-spinner {
     margin: auto;
 }
+
+.post-image {
+    width: 100%; /* Ensure the container is 100% width */
+    height: 200px; /* Set a fixed height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.post-image img {
+    max-width: 100%; /* Ensure the image width is at most 100% */
+    max-height: 100%; /* Ensure the image height fits within the container */
+    object-fit: contain; /* Ensure the entire image fits within the container */
+}
+
+mat-paginator {
+    margin-top: 1rem;
+}
